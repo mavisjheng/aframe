@@ -1,0 +1,57 @@
+<a-scene>
+  <a-box color="#6173F4" width="2" height="4" depth="1" position="-8 0 -8">
+  </a-box>
+</a-scene>
+
+-----------------------------------------------
+
+rotation="0 0 45"  scale="2 0.5 3"
+
+-----------------------------------------------
+
+src="./images/summer.jpg"
+
+-----------------------------------------------
+
+<a-assets>
+  <img id="summer" src="./images/summer.jpg">
+</a-assets>
+src="#summer"
+remove box color 
+
+-----------------------------------------------
+
+<a-animation attribute="rotation" dur="2000" repeat="indefinite" to="0 180 0"></a-animation>
+<a-animation attribute="scale" dur="2000" repeat="indefinite" to="1 2 1"></a-animation>
+
+-----------------------------------------------
+
+<a-camera position="0 0 0">
+  <a-cursor color="red">
+</a-camera>
+
+-----------------------------------------------
+
+<a-animation attribute="rotation" dur="2000" begin="click" repeat="2" to="0 180 0"></a-animation>
+
+-----------------------------------------------
+
+<a-event name="mouseenter" scale="2 2 2"></a-event>
+<a-event name="mouseleave" scale="1 1 1"></a-event>
+
+-----------------------------------------------
+
+<a-event name="mouseenter" target="#shadow" scale="5 2 2"></a-event>
+<a-event name="mouseleave" target="#shadow" scale="2 2 2"></a-event>
+<a-image id="shadow" position="-8 -5 -8" src="./images/radial-shadow-2.png"
+  opacity="1" rotation="-90 0 0" scale="2 2 2"></a-image>
+
+-----------------------------------------------
+
+<a-sky color="#73F7DD"></a-sky>
+<a-sky src="./images/pano/elephant.jpg" rotation="0 -140 0"></a-sky>
+<a-sky src="./images/pano/louvre.jpg" rotation="0 -100 0"></a-sky>
+<a-sky src="./images/pano/puydesancy.jpg" rotation="0 -130 0"></a-sky>
+<a-sky src="./images/pano/tintamarre.jpg" rotation="0 30 0"></a-sky>
+<a-sky src="https://ucarecdn.com/4130c599-445f-4e76-9052-49978e972641/"></a-sky>
+
