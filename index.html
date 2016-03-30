@@ -5,30 +5,65 @@
     <title>A-Frame Demo</title>
     <meta name="description" content="Hello, World! • A-Frame">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
   </head>
   <body>
     <a-scene>
-  <a-assets>
-    <img id="summer" src="./images/summer.jpg">
-  </a-assets>
+      <a-assets>
+        <img id="enemy" src="./images/enemy.png">
+      </a-assets>
 
-  <a-box width="2" height="3" depth="1" position="-8 0 -8" rotation="0 0 45"
-    src="#summer">
-    <a-animation attribute="rotation" dur="2000" begin="click" repeat="2" to="0 180 0"></a-animation>
-    <a-event name="mouseenter" scale="2 2 2"></a-event>
-    <a-event name="mouseenter" target="#shadow" scale="5 2 2"></a-event>
-    <a-event name="mouseleave" scale="1 1 1"></a-event>
-    <a-event name="mouseleave" target="#shadow" scale="2 2 2"></a-event>
-  </a-box>
+      <a-entity layout="type: circle; radius: 5">
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+        <a-image src="#enemy">
+          <a-animation attribute="scale" dur="100" begin="click" to="0 0 0"></a-animation>
+        </a-image>
+      </a-entity>
 
-  <a-camera position="0 0 0">
-    <a-cursor color="red">
-  </a-camera>
+      <a-camera position="0 0 0">
+        <a-cursor color="red">
+      </a-camera>
+      
+      <a-sky src="./images/pano/louvre.jpg" rotation="0 -100 0"></a-sky>
 
-  <a-image id="shadow" position="-8 -5 -8" src="./images/radial-shadow-2.png" opacity="1" rotation="-90 0 0" scale="2 2 2"></a-image>
-  
-  <a-sky src="./images/pano/louvre.jpg" rotation="0 -100 0"></a-sky>
-
-</a-scene>
+    </a-scene>
   </body>
 </html>
